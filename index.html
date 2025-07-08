@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="toggle-theme">
+    <label>
+      <input type="checkbox" id="theme-toggle" />
+      Dark Mode
+    </label>
+  </div>
+
+  <div class="game-container">
+    <h1>Tic Tac Toe</h1>
+
+    <div class="mode-select">
+      <label><input type="radio" name="mode" value="pvp" checked> 2 Players</label>
+      <label><input type="radio" name="mode" value="ai"> Vs AI</label>
+    </div>
+
+    <div class="scoreboard">
+      <span>X: <span id="scoreX">0</span></span>
+      <span>O: <span id="scoreO">0</span></span>
+      <span>Draws: <span id="scoreDraw">0</span></span>
+    </div>
+
+    <div class="board" id="board"></div>
+
+    <div class="status" id="status">Player X's turn</div>
+    <button id="reset-btn">Reset Game</button>
+  </div>
+
+  <!-- Sound effects -->
+  <audio id="move-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-select-click-1109.mp3"></audio>
+  <audio id="win-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-video-game-win-2016.mp3"></audio>
+  <audio id="draw-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-retro-arcade-game-over-470.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+:root {
+  --bg: #ffffffcc;
+  --text: #333;
+  --cell: #f9f9f9;
+  --cell-hover: #ddeeff;
+  --btn: #007bff;
+  --btn-hover: #0056b3;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+body.dark {
+  --bg: #222831;
+  --text: #eeeeee;
+  --cell: #393e46;
+  --cell-hover: #00adb5;
+  --btn: #00adb5;
+  --btn-hover: #00ced1;
+  background: #121212;
+  color: var(--text);
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #89f7fe, #66a6ff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 20px;
+  transition: background 0.5s, color 0.5s;
+}
+
+.toggle-theme {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 0.9rem;
+}
+
+.game-container {
+  background: var(--bg);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px var(--shadow);
+  text-align: center;
+  width: 90%;
+  max-width: 420px;
+  transition: 0.3s;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: var(--text);
+}
+
+.mode-select, .scoreboard {
+  margin-bottom: 15px;
+}
+
+.mode-select label, .scoreboard span {
+  margin: 0 10px;
+  color: var(--text);
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 15px;
+  margin: 20px auto;
+  justify-content: center;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background: var(--cell);
+  border-radius: 15px;
+  font-size: 2.5rem;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px var(--shadow);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.cell:hover {
+  background: var(--cell-hover);
+  transform: scale(1.05);
+}
+
+.status {
+  font-size: 1.2rem;
+  margin: 15px 0;
+  color: var(--text);
+}
+
+#reset-btn {
+  padding: 10px 25px;
+  background: var(--btn);
+  color: white;
+  border: none;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#reset-btn:hover {
+  background: var(--btn-hover);
+}
